@@ -1,0 +1,18 @@
+;ADV4 END GCode =================
+;Set right extruder(T0) to temp 0C
+M104 S0 T0
+;Set Build Platform to 0C
+M140 S0 T0
+;Move Z outward
+G162 Z F1800
+;Home X & Y
+G28 X Y
+;Recall Offsets
+M132 X Y A B
+;Chamber Fan OFF
+M652
+;Set RELATIVE mode
+G91
+;Disable Stepper Motors
+M18
+;ADV4 END GCode ==================

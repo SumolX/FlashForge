@@ -1,0 +1,19 @@
+Search and Replace:
+                   Search: ;Generated with Cura[\s\S]*?;ADV4
+                  Replace: ;Generated with Cura\n;ADV4
+  Use Regular Expressions: Checked
+  
+Search and Replace:
+                   Search: ;M104 S(.*)\.[0-9]
+                  Replace: ;M104 S\1
+  Use Regular Expressions: Checked
+  
+Search and Replace:
+                   Search: ;LAYER_COUNT:
+                  Replace: ;layer_count:
+  Use Regular Expressions: Not Checked
+
+Search and Replace:
+                   Search: ;LAYER:
+                  Replace: ;layer:
+  Use Regular Expressions: Not Checked
