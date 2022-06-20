@@ -1,2 +1,2 @@
-# FlashForge Adventure 4
-Slicer configurations parameters for Cura and PrusaSlicer.
+# FlashForge Adventurer 4
+Slicer configurations for Cura and PrusaSlicer.
