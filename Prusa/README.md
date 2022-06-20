@@ -1,13 +1,13 @@
 Installation Notes:
 
-Prusa Adv4_config_bundle.ini
+Setup/Prusa Adv4_config_bundle.ini
 
 Just follow the instructions in the video to have PrusaSlicer
 read this file, after you download it.  Sets it up for Adv4.
 If you try this for another printer, change PrusaSlicer's
 Printer Profile to match your printer (print dimensions etc)
 
-FixGCODE.bat
+Setup/FixGCODE.bat
 
 If you're on a PC and setup this .bat script in PrusaSlicer then:
 * Open this file in an editor
