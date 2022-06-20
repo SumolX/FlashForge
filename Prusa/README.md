@@ -20,20 +20,20 @@ If you're on a PC and setup this .bat script in PrusaSlicer then:
 * Install this files Full Path name in PrusaSlicer
 
 Web Links mentioned in the video:
-  Link to all these files on OneDrive:
-  https://1drv.ms/u/s!Arf1YeMUEh5Gm7UT4P-x_LF4yVmC1w?e=WY0Fx4
+* Link to all these files on OneDrive:
+* https://1drv.ms/u/s!Arf1YeMUEh5Gm7UT4P-x_LF4yVmC1w?e=WY0Fx4
 
-  PrusaSlicer Dload Link:
-  https://www.prusa3d.com/page/prusaslicer_424/ 
+PrusaSlicer Dload Link:
+* https://www.prusa3d.com/page/prusaslicer_424/ 
 
-  SED Stream Editor for Windows
-  https://sourceforge.net/projects/gnuwin32/files/sed/4.2-1/
+SED Stream Editor for Windows
+* https://sourceforge.net/projects/gnuwin32/files/sed/4.2-1/
   
-  Angus on Makers Muse
-  How to Control EVERY setting using Prusa Slicer 2.4.1
-  https://www.youtube.com/watch?v=Z7eKL7AhzNg&t=255s 
+Angus on Makers Muse
+* How to Control EVERY setting using Prusa Slicer 2.4.1
+* https://www.youtube.com/watch?v=Z7eKL7AhzNg&t=255s 
 
-Source:
-  Don deCourcelle
-  https://www.youtube.com/watch?v=Kz5Kc8BMcpo&t=7s
+Author
+* Don deCourcelle
+* https://www.youtube.com/watch?v=Kz5Kc8BMcpo&t=7s
  
