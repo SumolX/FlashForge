@@ -19,7 +19,7 @@ REM      NOT read/writable.  To correct this issue, CD (change directory) to a
 REM     folder that is read/writable
 REM     Failure to do this will result in Prusa Slicer generating 0 length GCODE files.
 REM     Below is my read/write folder location... please change this for your PC.
-cd \Users\Paulo\Documents\FlashPrint\Prusa Slicer
+cd \Users\Paulo\Documents\GitHub\FlashForge\Prusa\Setup\Archive
 echo Current directory: %CD%
 
 REM Convert blank lines to Comments by adding ";"
