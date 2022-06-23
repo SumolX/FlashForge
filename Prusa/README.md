@@ -2,6 +2,22 @@
 * Bundles/FlashForge_Adventurer_4.ini
 * Configuration has been tuned for the Adventurer 4 printer. All post-processing is done within PrusaSlicer and there is no external script dependencies. You will be able to immediately slice and upload the generated g-code to your printer via FlashPrint or USB.
 
+# FlashForge GX File Supported (optional)
+* Scripts/FlashForgeAdapter.py
+* Scripts/gx.py
+* Requires python >= 3.10 and both files above are required
+
+## Linux/macOS
+PrusaSlicer -> Print Settings-> Output options -> Post-processing scripts:
+```
+python /path/to/script/FlashForgeAdapter.py
+```
+## Windows
+PrusaSlicer -> Print Settings-> Output options -> Post-processing scripts:
+```
+c:\path\to\executable\python.exe c:\path\to\script\FlashForgeAdapter.py
+```
+
 # Note
 * Legacy Adventurer 4 configuration bundle can be found within Archive/
 
