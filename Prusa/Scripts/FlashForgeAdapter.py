@@ -76,9 +76,6 @@ def main(filename):
         if line.startswith('; max_print_speed'):
             gx.print_speed = int(line.split(' = ')[1])
             
-        if line.startswith(';output_filename_format'):
-            gcode_filename = line.split(' = ')[1]
-            
     file.close()
     
     gx.gcode = gcode.encode('latin-1')
