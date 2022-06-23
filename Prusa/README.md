@@ -41,3 +41,8 @@ c:\path\to\executable\FlashForgeAdapter\FlashForgeAdapter.exe
 
 # Author
 * Paulo Cabral (SumolX)
+
+# Special Thanks
+* Don deCourcelle
+* https://www.youtube.com/watch?v=Kz5Kc8BMcpo&t=7s
+* For coming up with the original G-Code and Adventure 4 PrucaSlicer bundle.
