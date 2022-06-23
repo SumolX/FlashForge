@@ -11,20 +11,20 @@
 * Enjoy your Adventurer 4 built-in display, which supports full color PNG images and PrusaSlicer generated GX Files will be gray and orange instead of black and gray produced by FlashPrint.
 
 ## Linux/macOS
-PrusaSlicer -> Print Settings-> Output options -> Post-processing scripts:
+* PrusaSlicer -> Print Settings-> Output options -> Post-processing scripts:
 ```
 python /path/to/script/FlashForgeAdapter.py
 ```
 
 ## Windows (Python Environment)
-PrusaSlicer -> Print Settings-> Output options -> Post-processing scripts:
+* PrusaSlicer -> Print Settings-> Output options -> Post-processing scripts:
 ```
 c:\path\to\executable\python.exe c:\path\to\script\FlashForgeAdapter.py
 ```
 
 ## Windows (No Python Environment)
-Download and extract scripts/FlashForgeAdapter.zip
-PrusaSlicer -> Print Settings-> Output options -> Post-processing scripts:
+* Download and extract scripts/FlashForgeAdapter.zip
+* PrusaSlicer -> Print Settings-> Output options -> Post-processing scripts:
 ```
 c:\path\to\executable\FlashForgeAdapter\FlashForgeAdapter.exe
 ```
