@@ -3,9 +3,12 @@
 * Configuration has been tuned for the Adventurer 4 printer. All post-processing is done within PrusaSlicer and there is no external script dependencies. You will be able to immediately slice and upload the generated g-code to your printer via FlashPrint or USB.
 
 # FlashForge GX File Supported (optional)
+* Scripts/FlashForgeAdapter.zip
 * Scripts/FlashForgeAdapter.py
 * Scripts/gx.py
 * Requires python >= 3.10 and both files above are required
+* When exporting the g-code, be sure to change the extension of the file .gcode -> .gx this will allow your desktop previews to work, though loading the file in FlashPrint will make no difference if the file extension is .gcode or .gx as it will be treated as a .gx file.
+* Enjoy your Adventurer 4 built in display, which by the way supports full color PNG and PrusaSlicer generated GX Files will be gray and orange instead of black and gray.
 
 ## Linux/macOS
 PrusaSlicer -> Print Settings-> Output options -> Post-processing scripts:
