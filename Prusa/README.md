@@ -39,10 +39,10 @@ c:\path\to\executable\FlashForgeAdapter\FlashForgeAdapter.exe
 * How to Control EVERY setting using Prusa Slicer 2.4.1
 * https://www.youtube.com/watch?v=Z7eKL7AhzNg&t=255s 
 
-# Author
-* Paulo Cabral (SumolX)
-
 # Special Thanks
 * Don deCourcelle
 * https://www.youtube.com/watch?v=Kz5Kc8BMcpo&t=7s
 * For coming up with the original G-Code and Adventure 4 PrucaSlicer bundle.
+
+# Author
+* Paulo Cabral (SumolX)
