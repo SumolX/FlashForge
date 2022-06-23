@@ -44,9 +44,19 @@ def main(filename):
 
         if line.startswith('; estimated printing time (normal mode)'):
             hhmmss = line.split(' = ')[1].split(' ')
-            gx.print_time = (int(hhmmss[0].split('h')[0]) * 3600) + \
-                            (int(hhmmss[1].split('m')[0]) * 60) + \
-                            (int(hhmmss[2].split('s')[0]))
+            size = len(hhmmss)
+            hh, mm, ss = int(0), int(0), int(0)
+            if size > 2:
+                hh = int(hhmmss[0].split('h')[0]) * 3600
+                mm = int(hhmmss[1].split('m')[0]) * 60
+                ss = int(hhmmss[2].split('s')[0])
+            elif size > 1:
+                mm = int(hhmmss[0].split('m')[0]) * 60
+                ss = int(hhmmss[1].split('s')[0])
+            else:
+                ss = int(hhmmss[0].split('s')[0])
+            
+            gx.print_time = hh + mm + ss
 
         if line.startswith('; filament used [mm]'):
             gx.filament_usage = int(line.split(' = ')[1].split('.')[0].strip())
