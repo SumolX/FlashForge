@@ -1,6 +1,8 @@
 # Import Configuration Bundle
 * Bundles/FlashForge_Adventurer_4.ini
 * Configuration has been tuned for the Adventurer 4 printer. All post-processing is done within PrusaSlicer and there is no external script dependencies. You will be able to immediately slice and upload the generated g-code to your printer via FlashPrint or USB.
+* Print Settings include both a Fine and Standard preset.
+* Filament Settings include a tuned FlashForge PLA filament preset.
 
 # FlashForge GX File Supported (optional)
 * Scripts/FlashForgeAdapter.zip
