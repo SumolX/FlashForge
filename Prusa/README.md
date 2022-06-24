@@ -5,7 +5,7 @@
 * Filament Settings include a tuned FlashForge PLA filament preset.
 
 # FlashForge GX File Generation (optional)
-Adventurer 4 built-in display is capable in displaying full color PNG images via the .gx file format.  This plugin allows for PrusaSlicer to generate GX compatible files which is supported by both FlashPrint and the Adventurer 4 printer.  Thumbnail previews are only supported by the GX File Format.
+Adventurer 4 built-in display is capable in displaying full color PNG images via the .gx file format.  This plugin allows for PrusaSlicer to generate GX compatible file which is supported by both FlashPrint and the Adventurer 4 printer.  Thumbnail previews are only available in the GX File Format.
 ### Dependencies
 * Scripts/FlashForgeAdapter.zip
 * Scripts/FlashForgeAdapter.py
@@ -25,7 +25,7 @@ python /path/to/script/FlashForgeAdapter.py
 ```
 
 ### Windows (No Python Environment)
-* Download and extract: Scripts/FlashForgeAdapter.zip
+* Download and extract: *Scripts/FlashForgeAdapter.zip*
 * PrusaSlicer -> Print Settings-> Output options -> Post-processing scripts:
 ```
 c:\path\to\executable\FlashForgeAdapter\FlashForgeAdapter.exe
