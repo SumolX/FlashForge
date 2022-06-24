@@ -4,7 +4,7 @@
 * Print Settings include both a Fine and Standard preset.
 * Filament Settings include a tuned FlashForge PLA filament preset.
 
-# FlashForge GX File Supported (optional)
+# FlashForge GX File Generation (optional)
 * Scripts/FlashForgeAdapter.zip
 * Scripts/FlashForgeAdapter.py
 * Scripts/gx.py
