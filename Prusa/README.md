@@ -25,7 +25,7 @@ python /path/to/script/FlashForgeAdapter.py
 ```
 
 ### Windows (No Python Environment)
-* Download and extract scripts/FlashForgeAdapter.zip
+* Download and extract: Scripts/FlashForgeAdapter.zip
 * PrusaSlicer -> Print Settings-> Output options -> Post-processing scripts:
 ```
 c:\path\to\executable\FlashForgeAdapter\FlashForgeAdapter.exe
