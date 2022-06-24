@@ -9,7 +9,6 @@
 * Scripts/FlashForgeAdapter.py
 * Scripts/gx.py
 * Requires python >= 3.10 and both Python scripts above are required
-* When exporting the g-code, be sure to change the extension of the file .gcode -> .gx this will allow your desktop previews to work, though loading the file in FlashPrint will make no difference if the file extension is .gcode or .gx as it will be treated as a .gx file.
 * Enjoy your Adventurer 4 built-in display, which supports full color PNG images and PrusaSlicer generated GX Files will be gray and orange instead of black and gray produced by FlashPrint.
 
 ## Replace Default G-Code Filename Extension (.gcode -> .gx)
