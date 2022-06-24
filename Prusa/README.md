@@ -12,16 +12,16 @@
 * When exporting the g-code, be sure to change the extension of the file .gcode -> .gx this will allow your desktop previews to work, though loading the file in FlashPrint will make no difference if the file extension is .gcode or .gx as it will be treated as a .gx file.
 * Enjoy your Adventurer 4 built-in display, which supports full color PNG images and PrusaSlicer generated GX Files will be gray and orange instead of black and gray produced by FlashPrint.
 
-## Linux/macOS
+## Replace Default G-Code Filename Extension (.gcode -> .gx)
+* PrusaSlicer -> Print Settings-> Output options -> Output file:
+```
+Output filename format: [input_filename_base].gx
+```
+
+## Linux/macOS/Windows (Python Environment)
 * PrusaSlicer -> Print Settings-> Output options -> Post-processing scripts:
 ```
 python /path/to/script/FlashForgeAdapter.py
-```
-
-## Windows (Python Environment)
-* PrusaSlicer -> Print Settings-> Output options -> Post-processing scripts:
-```
-c:\path\to\executable\python.exe c:\path\to\script\FlashForgeAdapter.py
 ```
 
 ## Windows (No Python Environment)
