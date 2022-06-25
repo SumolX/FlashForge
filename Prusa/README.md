@@ -31,6 +31,12 @@ python /path/to/script/FlashForgeAdapter.py
 c:\path\to\executable\FlashForgeAdapter\FlashForgeAdapter.exe
 ```
 
+### Auto load FlashPrint Upon G-Code Export (Windows Example)
+* PrusaSlicer -> Print Settings-> Output options -> Post-processing scripts:
+```
+c:\path\to\executable\FlashForgeAdapter\FlashForgeAdapter.exe --ffslicer="C:\Program Files\FlashForge\FlashPrint 5\FlashPrint.exe"
+```
+
 # Note
 * Legacy Adventurer 4 configuration bundle can be found within Archive/
 
