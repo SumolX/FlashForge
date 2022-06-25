@@ -11,6 +11,8 @@ from io import BytesIO
 
 import sys
 import base64
+import shutil
+import subprocess
 
 def convertToImage(base64Thumbnail):
     im = Image.open(BytesIO(base64.b64decode(base64Thumbnail)))
@@ -87,5 +89,10 @@ def main(filename):
     gx_file.close()
 
 if __name__ == "__main__":
-    main(sys.argv[1])
-    
+    if len(sys.argv) > 2:
+        main(sys.argv[2])
+        #--ffslicer=/path/to/FlashForge/slicer
+        shutil.copy(sys.argv[2], sys.argv[2] + ".gx")
+        subprocess.Popen([sys.argv[1].split('=')[1], sys.argv[2] + ".gx"])
+    else:
+        main(sys.argv[1])
