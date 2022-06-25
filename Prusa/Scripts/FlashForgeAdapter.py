@@ -9,6 +9,7 @@ from gx import GX
 from PIL import Image
 from io import BytesIO
 
+import os
 import sys
 import base64
 import shutil
@@ -21,11 +22,12 @@ def convertToImage(base64Thumbnail):
     im.close()
     return buffer.getvalue()
 
-def main(filename):
+def parseGCode(filename):
     gx = GX()
     gcode = ""
     thumbnail = ""    
     inThumbnailSection = False
+    output_filename = ""
 
     file = open(filename, 'r')
     lines = file.readlines()
@@ -78,6 +80,9 @@ def main(filename):
         if line.startswith('; max_print_speed'):
             gx.print_speed = int(line.split(' = ')[1])
             
+        if line.startswith(';filename:'):
+            output_filename = line.split(': ')[1][:-1]
+            
     file.close()
     
     gx.gcode = gcode.encode('latin-1')
@@ -87,12 +92,16 @@ def main(filename):
     gx_file = open(filename, 'wb')
     gx_file.write(gx.encode())
     gx_file.close()
+    
+    return os.path.join(os.path.dirname(filename), '') + output_filename
 
 if __name__ == "__main__":
     if len(sys.argv) > 2:
-        main(sys.argv[2])
+        filename = parseGCode(sys.argv[2])
+        
         #--ffslicer=/path/to/FlashForge/slicer
-        shutil.copy(sys.argv[2], sys.argv[2] + ".gx")
-        subprocess.Popen([sys.argv[1].split('=')[1], sys.argv[2] + ".gx"])
+        if sys.argv[1].startswith('--ffslicer'):
+            shutil.copy(sys.argv[2], filename)
+            subprocess.Popen([sys.argv[1].split('=')[1], filename])
     else:
-        main(sys.argv[1])
+        parseGCode(sys.argv[1])
