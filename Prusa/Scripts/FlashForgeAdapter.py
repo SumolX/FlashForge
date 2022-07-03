@@ -97,11 +97,13 @@ def parseGCode(filename):
 
 if __name__ == "__main__":
     if len(sys.argv) > 2:
-        filename = parseGCode(sys.argv[2])
+        gcode = sys.argv[2]
+        gxcode = parseGCode(gcode)
         
         #--ffslicer=/path/to/FlashForge/slicer
         if sys.argv[1].startswith('--ffslicer'):
-            shutil.copy(sys.argv[2], filename)
-            subprocess.Popen([sys.argv[1].split('=')[1], filename])
+            ffslicer = sys.argv[1].split('=')[1]
+            shutil.copy(gcode, gxcode)
+            subprocess.Popen("{0} {1}".format(ffslicer, r'"%s"' % gxcode))
     else:
         parseGCode(sys.argv[1])
