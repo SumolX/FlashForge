@@ -7,49 +7,49 @@ Create a new non-networked printer using the new printer wizard and select 'Cust
 Insert the following Search and Replace Script within Modify G-Code:
 
 * Fan Speed
- * Search:  `M106 S([0-9]*)(.*)`
- * Replace: `M106 S\1`
- * Use Regular Expressions `Checked`
+  * Search:  `M106 S([0-9]*)(.*)`
+  * Replace: `M106 S\1`
+  * Use Regular Expressions `Checked`
 
 * Extruder Temperature
- * Search:  `M104 S([0-9]*)(.*)`
- * Replace: `M104 S\1 T0`
- * Use Regular Expressions `Checked`
+  * Search:  `M104 S([0-9]*)(.*)`
+  * Replace: `M104 S\1 T0`
+  * Use Regular Expressions `Checked`
  
 * Bed Temperature
- * Search:  `M140 S([0-9]*)(.*)`
- * Replace: `M140 S\1 T0`
- * Use Regular Expressions `Checked`
+  * Search:  `M140 S([0-9]*)(.*)`
+  * Replace: `M140 S\1 T0`
+  * Use Regular Expressions `Checked`
  
 * Layer Count 
- * Search `;LAYER_COUNT:`
- * Search `;layer_count:`
- * Use Regular Expressions `NOT Checked`
+  * Search `;LAYER_COUNT:`
+  * Search `;layer_count:`
+  * Use Regular Expressions `NOT Checked`
 
 * Perimeter Type
- * Search `;TYPE:`
- * Search `;structure:`
- * Use Regular Expressions `NOT Checked`
+  * Search `;TYPE:`
+  * Search `;structure:`
+  * Use Regular Expressions `NOT Checked`
 
 * Outer Shell
- * Search `:WALL-OUTER`
- * Search `:shell-outer`
- * Use Regular Expressions `NOT Checked`
+  * Search `:WALL-OUTER`
+  * Search `:shell-outer`
+  * Use Regular Expressions `NOT Checked`
 
 * Inner Shell
- * Search `:WALL-INNER`
- * Search `:shell-inner`
- * Use Regular Expressions `NOT Checked`
+  * Search `:WALL-INNER`
+  * Search `:shell-inner`
+  * Use Regular Expressions `NOT Checked`
 
 * Infill Sparse
- * Search `:SKIN`
- * Search `:infill-sparse`
- * Use Regular Expressions `NOT Checked`
+  * Search `:SKIN`
+  * Search `:infill-sparse`
+  * Use Regular Expressions `NOT Checked`
 
 * Infill Solid
- * Search `:FILL`
- * Search `:infill-solid`
- * Use Regular Expressions `NOT Checked`
+  * Search `:FILL`
+  * Search `:infill-solid`
+  * Use Regular Expressions `NOT Checked`
 
 # Marketplace
 Search for and install `GXWriter` from Ronaoald Consulting as this will allow you to save a FlashForge formatted GX file.  Simply select GX as your file extension when saving your G-Code.
