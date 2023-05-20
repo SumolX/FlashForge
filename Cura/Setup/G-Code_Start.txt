@@ -1,15 +1,26 @@
-;ADV4 START GCODE ===============
-;Build size/2 for XYZ
-M118 X48.74 Y17.58 Z21.50 T0
+;== ADV4 START GCODE TOP ==
+;machine_type: Adventurer 4 Series
+;right_extruder_material: {material_name}
+;filament_diameter0: {material_diameter}
+;filament_diameter1: 0
+;perimeter_shells: {wall_line_count}
+;top_solid_layers: {top_layers}
+;bottom_solid_layers: {bottom_layers}
+;fill_density: {infill_sparse_density}
+;fill_pattern: {infill_pattern}
+;base_print_speed: {speed_print}
+;travel_speed: {speed_travel}
+;right_extruder_temperature: {material_print_temperature}
+;left_extruder_temperature: 0
+;platform_temperature: {material_bed_temperature_layer_0}
+;layer_height: {layer_height}
+;Build size for XYZ (Build Volume is verified by Slicer)
+M118 X20.00 Y20.00 Z20.00 T0
 ;Set Heated bed
 M140 S{material_bed_temperature_layer_0} T0
 ;Set right extruder temp
 M104 S{material_print_temperature_layer_0} T0
-;Set left extruder 0C (not present on ADV4)
-M104 S0 T1
-;M107 w no parms, turn off part cooling fan initially
-M107
-;Set Absolute positioning mode
+;Set absolute positioning mode
 G90
 ;Auto Home XYZ
 G28
@@ -29,17 +40,15 @@ M651 S0
 M108 T0
 ;Set initial XY position
 G1 X-30.62 Y-95.00 F7140
-;Z initial location
+;Set initial Z location
 G1 Z.200 F420
-;ADV4 Pre-Extrude 0.4 Nozzle Edge Build Plate=====
-;preExtrude:0.40
-;structure:pre-extrude
+;Pre-Extrude 0.4 Nozzle Edge Build Plate
+G92 E0
 G1 X-39.15 Y-96.26 F7140
 G1 X89.69 Y-96.26 E17.7325 F600
 G1 X93.72 Y-95.72 E18.2518
 G1 X93.72 Y-95.72 F7140
 G1 X98.21 Y-93.87 E18.8720 F600
 G1 X100.00 Y-92.53 E19.1576
-;1st Layer Fan 0%
-M106 S0
-;ADV4 START GCODE ===============
+G92 E0
+;== ADV4 START GCODE BOT ==

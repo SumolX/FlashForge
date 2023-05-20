@@ -3,22 +3,56 @@ Create a new non-networked printer using the new printer wizard and select 'Cust
 
 * Files are located within Setup/
 
-# Printing Profiles
-A 0.2mm Draft profile has been included, simply import the profile via Manage Printer(s).  These profiles will be modified to reflect the capabilities of the printer.  Modifications such as print and travel speeds have been modified to 50mm/s and 100mms/ respectively.
+# Post Processing
+Insert the following Search and Replace Script within Modify G-Code:
 
-* Files are located within Profiles/
+* Fan Speed
+ * Search:  `M106 S([0-9]*)(.*)`
+ * Replace: `M106 S\1`
+ * Use Regular Expressions `Checked`
 
-# Post-Processing Scripts
-Initial script included is FlashForgeAdapter.py which allows for proper FlashPrint loading of G-Code as well as accurate real-time printing status via the display of the printer.  More enhancements are to come... stay tuned!
+* Extruder Temperature
+ * Search:  `M104 S([0-9]*)(.*)`
+ * Replace: `M104 S\1 T0`
+ * Use Regular Expressions `Checked`
+ 
+* Bed Temperature
+ * Search:  `M140 S([0-9]*)(.*)`
+ * Replace: `M140 S\1 T0`
+ * Use Regular Expressions `Checked`
+ 
+* Layer Count 
+ * Search `;LAYER_COUNT:`
+ * Search `;layer_count:`
+ * Use Regular Expressions `NOT Checked`
 
-* Files are located within Scripts/
-* Copy FlashForgeAdapter.py -> C:\Users\[YOUR ACCOUNT NAME]\AppData\Roaming\cura\5.0\scripts\
-* Then restart Ultimate Cura 5.0 for script to become accessible.
-* Cura -> Extensions -> Post Processing -> Select 'Modify G-Code'
-* Select 'Add a script'
-* Select 'FlashForge Adapter' then click 'close'
+* Perimeter Type
+ * Search `;TYPE:`
+ * Search `;structure:`
+ * Use Regular Expressions `NOT Checked`
 
-Currently only one machine type is supported and that is the Adventurer 4.  However, I wrote the script in such a way we can extended it to support other printers in the future.
+* Outer Shell
+ * Search `:WALL-OUTER`
+ * Search `:shell-outer`
+ * Use Regular Expressions `NOT Checked`
+
+* Inner Shell
+ * Search `:WALL-INNER`
+ * Search `:shell-inner`
+ * Use Regular Expressions `NOT Checked`
+
+* Infill Sparse
+ * Search `:SKIN`
+ * Search `:infill-sparse`
+ * Use Regular Expressions `NOT Checked`
+
+* Infill Solid
+ * Search `:FILL`
+ * Search `:infill-solid`
+ * Use Regular Expressions `NOT Checked`
+
+# Marketplace
+Search for and install `GXWriter` from Ronaoald Consulting as this will allow you to save a FlashForge formatted GX file.  Simply select GX as your file extension when saving your G-Code.
 
 # Author
 Paulo Cabral (SumolX) 

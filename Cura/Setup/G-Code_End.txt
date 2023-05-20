@@ -1,4 +1,4 @@
-;ADV4 END GCode =================
+;== ADV4 END GCODE TOP ==
 ;Set right extruder(T0) to temp 0C
 M104 S0 T0
 ;Set Build Platform to 0C
@@ -15,4 +15,4 @@ M652
 G91
 ;Disable Stepper Motors
 M18
-;ADV4 END GCode ==================
+;== ADV4 END GCODE BOT ==
