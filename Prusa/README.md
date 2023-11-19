@@ -1,8 +1,7 @@
 # Import Configuration Bundle
 * Bundles/FlashForge_Adventurer_4.ini
 * Configuration has been tuned for the Adventurer 4 printer. All post-processing is done within PrusaSlicer and there is no external script dependencies. You will be able to immediately slice and upload the generated g-code to your printer via FlashPrint or USB.
-* Print Settings include both a Fine and Standard preset.
-* Filament Settings include a tuned FlashForge PLA filament preset.
+* Both print and filament profiles are tuned for Adventurer 4.
 
 # FlashForge GX File Generation (Required Step with Latest Firmware)
 Adventurer 4 built-in display is capable in displaying full color PNG images via the .gx file format.  This plugin allows for PrusaSlicer to generate GX compatible file which is supported by both FlashPrint and the Adventurer 4 printer.  Thumbnail previews are only available in the GX File Format.
@@ -61,4 +60,4 @@ If you enjoyed this work or would like to see additional tuned filaments please 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=E4DSQMLR5JUXS)
 
 # Support
-[![discord](https://theme.zdassets.com/theme_assets/678183/cc59daa07820943e943c2fc283b9079d7003ff76.svg)](https://discord.gg/rRzp63MJtu_)
+[![discord](https://theme.zdassets.com/theme_assets/678183/cc59daa07820943e943c2fc283b9079d7003ff76.svg)](https://discord.gg/rRzp63MJtu)
