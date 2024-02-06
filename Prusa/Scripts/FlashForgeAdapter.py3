@@ -29,7 +29,7 @@ def parseGCode(filename):
     inThumbnailSection = False
     output_filename = ""
 
-    file = open(filename, 'r')
+    file = open(filename, encoding='utf-8', errors='ignore')
     lines = file.readlines()
     
     for line in lines:
@@ -85,7 +85,7 @@ def parseGCode(filename):
             
     file.close()
     
-    gx.gcode = gcode.encode('latin-1')
+    gx.gcode = gcode.encode('latin-1', errors='ignore')
     gx.bmp = convertToImage(thumbnail)
     gx.gcode_start = gx.bitmap_start + len(gx.bmp)
 
