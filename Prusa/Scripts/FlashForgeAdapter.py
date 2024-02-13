@@ -104,6 +104,6 @@ if __name__ == "__main__":
         if sys.argv[1].startswith('--ffslicer'):
             ffslicer = sys.argv[1].split('=')[1]
             shutil.copy(gcode, gxcode)
-            subprocess.Popen([ffslicer, gxcode])
+            subprocess.Popen([ffslicer, gxcode], stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE, start_new_session=True)
     else:
         parseGCode(sys.argv[1])
