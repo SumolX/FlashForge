@@ -1,6 +1,10 @@
 # FlashForge Adventurer 4
 Slicer configurations for Cura and PrusaSlicer.
 
+# Compatible Firmware
+Latest FlashForge Firmware has many issues.  The Feburary 2023 firmware is deemed stabled and works without issue:
+Firmware/FlashForge-Adventurer-4-Firmware-V2.2.4-2.3.zip
+
 # Donation
 If you enjoyed this work or would like to see additional tuned filaments please feel free to donate.
 
