@@ -18,10 +18,16 @@ Adventurer 4 built-in display is capable in displaying full color PNG images via
 Output filename format: [input_filename_base].gx
 ```
 
-### Linux/macOS/Windows (Python Environment)
+### Linux/Windows (Python Environment)
 * PrusaSlicer -> Print Settings-> Output options -> Post-processing scripts:
 ```
 python /path/to/script/FlashForgeAdapter.py
+```
+
+### macOS (Python or MiniConda Environment)
+* PrusaSlicer -> Print Settings-> Output options -> Post-processing scripts:
+```
+/path/to/script/FlashForgeAdapter.osx
 ```
 
 ### Windows (No Python Environment)
