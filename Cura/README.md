@@ -1,3 +1,7 @@
+# Firmware Compatibility
+Latest tested firmware is from Feburary 2023 and works without issue.
+* Firmware/FlashForge-Adventurer-4-Firmware-V2.2.4-2.3.zip
+
 # New Printer Setup
 Create a new non-networked printer using the new printer wizard and select 'Custom FFF printer'.  Give it a name such as 'FlashForge Adventurer 4' and click next.  Enter all the information requested by copying the screenshots provided.  For G-Code you can simply copy the contents of the provided G-Code text files and paste them in their respective windows.
 

@@ -1,3 +1,7 @@
+# Firmware Compatibility
+Latest tested firmware is from Feburary 2023 and works without issue.
+* Firmware/FlashForge-Adventurer-4-Firmware-V2.2.4-2.3.zip
+
 # Import Configuration Bundle
 * Bundles/FlashForge_Adventurer_4.ini
 * Configuration, print and filament profiles have been tuned for the Adventurer 4 printer.
