@@ -46,21 +46,25 @@ def parseGCode(filename):
         else:
             gcode = gcode + line
 
-        if line.startswith('; estimated printing time (normal mode)'):
-            hhmmss = line.split(' = ')[1].split(' ')
+        if line.startswith("; estimated printing time (normal mode)"):
+            hhmmss = line.split(" = ")[1].split(" ")
             size = len(hhmmss)
-            hh, mm, ss = int(0), int(0), int(0)
-            if size > 2:
-                hh = int(hhmmss[0].split('h')[0]) * 3600
-                mm = int(hhmmss[1].split('m')[0]) * 60
-                ss = int(hhmmss[2].split('s')[0])
+            dd, hh, mm, ss = int(0), int(0), int(0), int(0)
+            if size > 3:
+                dd = int(hhmmss[0].split("d")[0]) * 86400
+                hh = int(hhmmss[1].split("h")[0]) * 3600
+                mm = int(hhmmss[2].split("m")[0]) * 60
+                ss = int(hhmmss[3].split("s")[0])
+            elif size > 2:
+                hh = int(hhmmss[0].split("h")[0]) * 3600
+                mm = int(hhmmss[1].split("m")[0]) * 60
+                ss = int(hhmmss[2].split("s")[0])
             elif size > 1:
-                mm = int(hhmmss[0].split('m')[0]) * 60
-                ss = int(hhmmss[1].split('s')[0])
+                mm = int(hhmmss[0].split("m")[0]) * 60
+                ss = int(hhmmss[1].split("s")[0])
             else:
-                ss = int(hhmmss[0].split('s')[0])
-            
-            gx.print_time = hh + mm + ss
+                ss = int(hhmmss[0].split("s")[0])
+            gx.print_time = dd + hh + mm + ss
 
         if line.startswith('; filament used [mm]'):
             gx.filament_usage = int(line.split(' = ')[1].split('.')[0].strip())
