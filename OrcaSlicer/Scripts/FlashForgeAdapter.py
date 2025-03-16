@@ -89,27 +89,9 @@ def parseGCode(filename):
     gx.gcode = gcode.encode('latin-1', errors='ignore')
     gx.bmp = convertToImage(thumbnail)
     gx.gcode_start = gx.bitmap_start + len(gx.bmp)
-
-    gx_filename = \
-        os.path.dirname(filename) + '/' + \
-        os.path.splitext(os.path.basename(filename))[0] + '.gx'
-
-    gx_file = open(gx_filename, 'wb')
+    gx_file = open(filename, 'wb')
     gx_file.write(gx.encode())
     gx_file.close()
-    
-    return gx_filename
 
 if __name__ == "__main__":
-    if len(sys.argv) > 2:
-        gcode = sys.argv[2]
-        gxcode = parseGCode(gcode)
-        
-        #--ffslicer=/path/to/FlashForge/slicer
-        if sys.argv[1].startswith('--ffslicer'):
-            ffslicer = sys.argv[1].split('=')[1]
-            #shutil.copy(gcode, gxcode)
-            subprocess.Popen([ffslicer, gxcode], stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE, start_new_session=True)
-            pass
-    else:
-        parseGCode(sys.argv[1])
+    parseGCode(sys.argv[1])
