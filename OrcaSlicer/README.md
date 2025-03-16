@@ -3,7 +3,7 @@ Latest tested firmware is from Feburary 2023 and works without issue.
 * Firmware/FlashForge-Adventurer-4-Firmware-V2.2.4-2.3.zip
 
 # FlashForge GX File Generation (Required Step with Latest Firmware)
-Adventurer 4 built-in display is capable in displaying full color PNG images via the .gx file format.  This plugin allows for PrusaSlicer to generate GX compatible file which is supported by both FlashPrint and the Adventurer 4 printer.  Thumbnail previews are only available in the GX File Format.
+Adventurer 4 built-in display is capable in displaying full color PNG images via the .gx file format.  This plugin allows for OrcaSlicer to generate GX compatible file which is supported by both FlashPrint and the Adventurer 4 printer.  Thumbnail previews are only available in the GX File Format.
 ### Dependencies
 * Scripts/FlashForgeAdapter.zip
 * Scripts/FlashForgeAdapter.py
