@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# Slicer Requirements
+#  FlashPrint
+
+# Python3 Requirements
+#  pillow
+
+# Mini Conda Requirements (optional)
+#  create env: flashforge
+#  conda install pillow
+
+SCRIPT_PATH=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+
+# Try built-in python3
+if [ ! -f /opt/miniconda/etc/profile.d/conda.sh ]; then
+    python3 ${SCRIPT_PATH}/FlashForgeAdapter.py --ffslicer="/Applications/FlashPrint 5.app/Contents/MacOS/FlashPrint" $1
+else
+    source /opt/miniconda/etc/profile.d/conda.sh
+    conda activate flashforge
+    python3 ${SCRIPT_PATH}/FlashForgeAdapter.py --ffslicer="/Applications/FlashPrint 5.app/Contents/MacOS/FlashPrint" $1
+    conda deactivate
+fi
