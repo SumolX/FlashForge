@@ -12,8 +12,14 @@ Adventurer 4 built-in display is capable in displaying full color PNG images via
 
 ### Replace Default G-Code Filename Extension (.gcode -> .gx)
 * Orcaslicer -> Others-> G-code output -> Filename format:
+
+From
 ```
-{input_filename_base}.gcode -> {input_filename_base}.gx
+{input_filename_base}.gcode
+```
+To
+```
+{input_filename_base}.gx
 ```
 
 ### Linux/Windows (Python Environment)
